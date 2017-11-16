@@ -1,0 +1,45 @@
+extends layouts/main
+
+block header
+    section(id='section-' + id + '-header')
+        div(class='text-center fadeInLoad')
+            h1 Kompletta registreringssystem
+                span(class='d-block') Hantera deltagare och gör utskick
+
+block content
+    section(id='section-' + id + '-content', class='container')
+        h1(class='text-center title') Inga begränsningar
+        h4(class='text-center title mb-5rem font-light') Vi är inte låsta i några system, vilket gör att vi kan skapa lösningar efter vad just ni är ute efter till erat event.
+
+        div(class='row mb-5rem')
+            div(class='card col-md-3 text-center')
+                div(class='card-block')
+                    h3(class='card-title') Inbjudningar
+                    p(class='card-text') Skapa personliga inbjudningar och påminnelser, med tillgång till statistik över öppnade e-mails.
+
+            div(class='card col-md-3 text-center')
+                div(class='card-block')
+                    h3(class='card-title') Registrering
+                    p(class='card-text') Vi skapar formulären exakt så som ni önskar! Enkla formulär eller avancerade med t.ex. betal lösningar eller val-baserade fält.
+
+            div(class='card col-md-3 text-center')
+                div(class='card-block')
+                    h3(class='card-title') Genomförande
+                    p(class='card-text') Checka in deltagarna genom vår app &mdash; lägg upp frågor, mätningar och diskussioner för deltagarna att engagera sig i under eventet.
+
+            div(class='card col-md-3 text-center')
+                div(class='card-block')
+                    h3(class='card-title') Uppföljning
+                    p(class='card-text') Följ upp efter eventet med enkätfrågor eller bildspel.
+
+        h4(class='text-center title mb-5 font-light') Några av de kunder vi har haft nöjet att jobba med
+
+        div(class='row clients mt-5')
+            div(class='col-md-12')
+                div(class='card')
+                    div(class='row p-5')
+                        - let logos = ['creative-meetings', 'skanska', 'vasakronan', 'lansforsakringar', 'seb', 'mtg', 'volvo', 'coca-cola', 'vaxjolakers', 'spp', 'mercedes', 'dice'];
+                        each logo in logos
+                            div(class='col-md-2 d-flex align-self-center', data-id= logo)
+                                div(class='badge')
+                                    img(src='/assets/images/clients/' + logo + '.png', class='img-fluid', alt= logo)

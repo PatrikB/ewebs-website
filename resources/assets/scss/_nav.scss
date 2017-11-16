@@ -1,0 +1,270 @@
+nav {
+    
+    &.navbar {
+        
+        padding:1.5rem 0;
+        
+        &.navbar-bg {
+            background:$offwhite;
+            box-shadow:0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+            color:$font-color;
+            
+            ul.navbar-nav li a,
+            a.navbar-brand {
+                color:$font-color;
+            }
+            
+            ul.navbar-nav li a,
+            ul.navbar-nav li.active a {
+                
+                &:after,
+                &:hover:after {
+                    background:$font-color;
+                }
+                
+            }
+            
+        }
+        
+        &.navbar-lang {
+            padding-top:2rem;
+            padding-bottom:0;
+            
+            ul.nav li {
+                
+                &.active {
+                
+                    a {
+                        border-bottom:none;
+                        
+                        &:after {
+                            height:0;
+                        }
+                        
+                    }
+
+                }
+                
+                a,
+                a:hover {
+                    
+                    &:after {
+                        height:0;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        .navbar-toggler {
+            transition:.2s ease-out;
+            cursor:pointer;
+            border-color:$primary;
+            color:$primary;
+            background:$offwhite;
+            
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+            
+            &.collapsed {
+                transition:.2s ease-out;
+                border-color:$offwhite;
+                color:$offwhite;
+                background:transparent;
+                
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+                }
+                
+                &:hover {
+                    
+                    border-color:$primary;
+                    color:$primary;
+                    background:$offwhite;
+                    
+                    .navbar-toggler-icon {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        a.navbar-brand {
+            color:$offwhite;
+            font-style:italic;
+            font-weight:500;
+            font-size:30px;
+            opacity:.7;
+            transition:.2s ease-out;
+            
+            &:hover {
+                opacity:1;
+            }
+            
+        }
+        
+        ul {
+            
+            &.navbar-nav,
+            &.nav {
+                
+                li {
+                    
+                    &.active {
+                        
+                        a {
+                            opacity:1;
+                            position:relative;
+                            transition:.2s ease-out;
+                            
+                            &:after {
+                                transition:.2s ease-out;
+                                position:absolute;
+                                content:'';
+                                bottom:6px;
+                                right:0;
+                                width:100%;
+                                height:2px;
+                                background:$offwhite;
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    a {
+                        position:relative;
+                        transition:.2s ease-out;
+                        color:$offwhite;
+                        font-size:16px;
+                        opacity:.7;
+                        font-weight:500;
+                        
+                        &:after {
+                            transition:.2s ease-out;
+                            position:absolute;
+                            content:'';
+                            bottom:6px;
+                            right:0;
+                            width:0;
+                            height:2px;
+                            background:$offwhite;
+                        }
+                        
+                        &.btn {
+                            opacity:1;
+                            color:$offwhite;
+                            
+                            span {
+                                opacity:1;
+                            }
+                            
+                            &:after {
+                                height:0;
+                            }
+                            
+                            &:hover {
+                                
+                                &:after {
+                                    height:0;
+                                }
+                                
+                            }
+
+                        }
+                        
+                        &:hover {
+                            opacity:1;
+                            
+                            &:after {
+                                transition:.2s ease-out;
+                                position:absolute;
+                                content:'';
+                                bottom:6px;
+                                left:0;
+                                width:100%;
+                                height:2px;
+                                background:$offwhite;
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            &.nav {
+                
+                li {
+                    
+                    padding-right:0;
+                    padding-left:0;
+                    
+                    &.active {
+                        
+                        a {
+                            text-decoration:none;
+                        }
+                        
+                    }
+                    
+                    a {
+                        font-style:italic;
+                        font-weight:400;
+                        padding:0 .5em;
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+.nav {
+    
+    &.nav-pills {
+        background:$primary;
+        
+        .nav-link {
+            border-radius:0;
+            color:$offwhite;
+            padding:1em 1.5em 1em 3em;
+            font-weight:400;
+            font-size:1.15rem;
+            transition:.2s ease-out;
+            position:relative;
+            
+            &:hover {
+                background:rgba(0, 0, 0, .1);
+            }
+            
+            &.active {
+                background:$primary-hover;
+                font-weight:500;
+                
+                &:before {
+                    position:absolute;
+                    font-family:'Material Icons';
+                    content:'\E5CC';
+                    left:1.2rem;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}

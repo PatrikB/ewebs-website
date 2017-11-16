@@ -1,0 +1,37 @@
+.btn {
+    
+    cursor:pointer;
+    
+    &.btn-primary {
+        background-color:$primary;
+        border-color:$primary;
+
+        &:hover {
+            background-color:$primary-hover;
+            border-color:$primary-hover;
+        }
+
+    }
+    
+    &.btn-scroll {
+        transition:.2s ease-out;
+        opacity:.9;
+        display:inline-block;
+        margin:0 auto;
+        background:transparent;
+        color:#fafafa;
+        line-height:1;
+        font-size:20px;
+        position:absolute;
+        bottom:5rem;
+        left:0;
+        right:0;
+        
+        &:hover {
+            opacity:1;
+            font-size:20.5px;
+        }
+        
+    }
+    
+}

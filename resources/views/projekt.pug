@@ -1,0 +1,17 @@
+extends layouts/main
+
+block content
+    section(id='section-' + id)
+        h1(class='text-center title mb-5rem') Ett urval av uppdrag
+        
+        div(class='row justify-content-center')
+            div(class='col-md-8')
+                p(class='lead') Efter #[strong(class='border-bottom-mini') 10 år] har vi samlat på oss en hel del uppdrag! Tyvärr kan vi inte visa så mycket.
+                p Då majoriteten av det vi gör är eventwebsidor för interna kick-offer eller jubileum är det mycket som är hemligt! Nedan hittar ni några av de publika websidor vi har skapat.
+        
+        div(class='row projects mt-5')
+            - let projects = { 'the-sprint-experiment': 'The Sprint Experiment' };
+            each project, href in projects
+                a(class='card col-md-4 text-center', href='/projekt/' + href, data-id= project)
+                    div(class='card-block')
+                        h3(class='card-title')= project

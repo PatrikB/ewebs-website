@@ -1,0 +1,72 @@
+extends layouts/main
+
+block content
+    section(id='section-' + id)
+    
+        if project == 'the-sprint-experiment'
+            div(class='row')
+                div(class='col-md-4')
+
+
+                div(class='col-md-4')
+                    h1(class='text-center title mb-5rem border-bottom')= label
+
+                div(class='col-md-4')
+                    a(class='next-project text-right', href='/projekt/skanska')
+                        span Skanska
+                        
+                div(class='align-self-center')
+                    div(class='row')
+                        div(class='col-md-6 fadeInLoad')
+                            h3(class='h2') Donec dapibus ligula sodales dolor tincidunt rhoncus.
+                            p(class='lead') Fusce orci eros, tincidunt tempor suscipit vitae, suscipit nec lacus. Curabitur ultricies justo ac mollis accumsan. Quisque vel felis nibh.
+                            blockquote(class='blockquote') Ut ornare rhoncus arcu at rutrum. Donec porttitor odio et dolor mollis, a mollis mauris dignissim. Quisque sem ex, euismod id cursus id, varius et massa.
+                            p Nunc elementum imperdiet eros eu blandit. Nulla est nisi, finibus a dui non, iaculis imperdiet ex. Integer pharetra finibus vulputate. Donec vitae vulputate nisl. Vivamus vestibulum gravida nisi accumsan efficitur. Ut et maximus eros. Phasellus ut tortor sed arcu ullamcorper consequat. Donec consequat a quam non placerat. Pellentesque vel est magna. Fusce purus metus, varius nec pretium sit amet, malesuada sit amet odio. Aenean fringilla nibh ac sapien dictum, eget sollicitudin metus condimentum. Nunc quis condimentum quam. Quisque sollicitudin nulla quis rhoncus aliquam. Pellentesque non auctor metus. Mauris laoreet porttitor facilisis. Morbi ornare nibh facilisis tempus lobortis. 
+                        div(class='col-md-6')
+                            img(src='/assets/images/projects/' + project + '-responsive.png', class='fadeInLoad')
+        
+        if project == 'skanska'
+            div(class='row')
+                div(class='col-md-4')
+                    a(class='prev-project', href='/projekt/the-sprint-experiment')
+                        span The Sprint Experiment
+
+                div(class='col-md-4')
+                    h1(class='text-center title mb-5rem border-bottom')= label
+
+                div(class='col-md-4')
+                    a(class='next-project text-right', href='/projekt/bsh')
+                        span BSH
+                        
+                div(class='align-self-center')
+                    div(class='row')
+                        div(class='col-md-6 fadeInLoad')
+                            h3(class='h2') Donec dapibus ligula sodales dolor tincidunt rhoncus.
+                            p(class='lead') Fusce orci eros, tincidunt tempor suscipit vitae, suscipit nec lacus. Curabitur ultricies justo ac mollis accumsan. Quisque vel felis nibh.
+                            blockquote(class='blockquote') Ut ornare rhoncus arcu at rutrum. Donec porttitor odio et dolor mollis, a mollis mauris dignissim. Quisque sem ex, euismod id cursus id, varius et massa.
+                            p Nunc elementum imperdiet eros eu blandit. Nulla est nisi, finibus a dui non, iaculis imperdiet ex. Integer pharetra finibus vulputate. Donec vitae vulputate nisl. Vivamus vestibulum gravida nisi accumsan efficitur. Ut et maximus eros. Phasellus ut tortor sed arcu ullamcorper consequat. Donec consequat a quam non placerat. Pellentesque vel est magna. Fusce purus metus, varius nec pretium sit amet, malesuada sit amet odio. Aenean fringilla nibh ac sapien dictum, eget sollicitudin metus condimentum. Nunc quis condimentum quam. Quisque sollicitudin nulla quis rhoncus aliquam. Pellentesque non auctor metus. Mauris laoreet porttitor facilisis. Morbi ornare nibh facilisis tempus lobortis. 
+                        div(class='col-md-6')
+                            img(src='/assets/images/projects/' + project + '-responsive.png', class='fadeInLoad')
+                            
+        if project == 'bsh'
+            div(class='row')
+                div(class='col-md-4')
+                    a(class='prev-project', href='/projekt/skanska')
+                        span Skanska
+
+                div(class='col-md-4')
+                    h1(class='text-center title mb-5rem border-bottom')= label
+
+                div(class='col-md-4')
+                    a(class='next-project text-right', href='/projekt/capio-st-gorans')
+                        span Capio S:t Görans
+                        
+                div(class='align-self-center')
+                    div(class='row')
+                        div(class='col-md-6 fadeInLoad')
+                            h3(class='h2') Donec dapibus ligula sodales dolor tincidunt rhoncus.
+                            p(class='lead') Fusce orci eros, tincidunt tempor suscipit vitae, suscipit nec lacus. Curabitur ultricies justo ac mollis accumsan. Quisque vel felis nibh.
+                            blockquote(class='blockquote') Ut ornare rhoncus arcu at rutrum. Donec porttitor odio et dolor mollis, a mollis mauris dignissim. Quisque sem ex, euismod id cursus id, varius et massa.
+                            p Nunc elementum imperdiet eros eu blandit. Nulla est nisi, finibus a dui non, iaculis imperdiet ex. Integer pharetra finibus vulputate. Donec vitae vulputate nisl. Vivamus vestibulum gravida nisi accumsan efficitur. Ut et maximus eros. Phasellus ut tortor sed arcu ullamcorper consequat. Donec consequat a quam non placerat. Pellentesque vel est magna. Fusce purus metus, varius nec pretium sit amet, malesuada sit amet odio. Aenean fringilla nibh ac sapien dictum, eget sollicitudin metus condimentum. Nunc quis condimentum quam. Quisque sollicitudin nulla quis rhoncus aliquam. Pellentesque non auctor metus. Mauris laoreet porttitor facilisis. Morbi ornare nibh facilisis tempus lobortis. 
+                        div(class='col-md-6')
+                            img(src='/assets/images/projects/' + project + '-responsive.png', class='fadeInLoad')

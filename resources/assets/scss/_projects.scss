@@ -1,0 +1,199 @@
+.projects {
+    
+    .card {
+        
+        position:relative;
+        transition:.5s ease-out;
+        background-repeat:no-repeat;
+        background-size:110%;
+        background-position:center center;
+        cursor:pointer;
+        text-decoration:none;
+        
+        &:before {
+            position:absolute;
+            transition:.2s ease-out;
+            content:'';
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background:rgba($primary, .6);
+        }
+        
+        &:hover {
+            background-size:120%;
+            
+            &:before {
+                background:rgba($primary, .2);
+            }
+            
+        }
+        
+        .card-block {
+            
+            padding:8rem 2rem;
+            
+            .card-title {
+                position:relative;
+                z-index:$zindex-dropdown;
+                color:$font-color;
+                text-decoration:none;
+            }
+            
+        }
+        
+        &[data-id='The Sprint Experiment'] {
+            background-image:url('../images/projects/the-sprint-experiment-main.png');
+        }
+        
+        &[data-id='Skanska'] {
+            background-image:url('../images/projects/skanska-main.png');
+        }
+        
+        &[data-id='BSH'] {
+            background-image:url('../images/projects/bsh-main.png');
+        }
+        
+        &[data-id='Capio S:t Görans'] {
+            background-image:url('../images/projects/capio-st-gorans-main.png');
+        }
+        
+        &[data-id='Aras'] {
+            background-image:url('../images/projects/aras-main.png');
+        }
+        
+        &[data-id='Happy Homes'] {
+            background-image:url('../images/projects/happy-homes-main.png');
+        }
+        
+        &[data-id='DinBil'] {
+            background-image:url('../images/projects/dinbil-main.png');
+        }
+        
+        &[data-id='Veidekke'] {
+            background-image:url('../images/projects/veidekke-main.png');
+        }
+        
+        &[data-id='DLL'] {
+            background-image:url('../images/projects/dll-main.png');
+        }
+        
+        &[data-id='Elektroskandia'] {
+            background-image:url('../images/projects/elektroskandia-main.png');
+        }
+        
+    }
+    
+}
+
+section#section-projekt {
+ 
+    a {
+        
+        &.prev-project,
+        &.next-project {
+            color:$font-color;
+            display:block;
+            width:100%;
+            position:relative;
+            transition:.2s ease-out;
+            
+            &:hover {
+                text-decoration:none;
+            }
+            
+            span {
+                line-height:24px;
+                display:block;
+                padding-top:6px;
+            }
+            
+        }
+        
+        &.prev-project {
+            
+            padding-left:50px;
+            
+            &:after {
+                display:block;
+                position:absolute;
+                content:'';
+                left:0;
+                top:15px;
+                width:8px;
+                height:8px;
+                transform:rotate(-45deg);
+                transform-origin:50% 50%;
+                border-color:$offwhite;
+                border-style:solid;
+                border-width:2px 0 0 2px;
+            }
+            
+            &:before {
+                transition:.3s ease-out;
+                position:absolute;
+                content:'';
+                width:40px;
+                height:2px;
+                top:18px;
+                left:0;
+                background:$offwhite;
+            }
+            
+            &:hover {
+                
+                &:before {
+                    width:30px;
+                    left:0;
+                    max-width:100%;
+                }
+                
+            }
+            
+        }
+        
+        &.next-project {
+            
+            padding-right:50px;
+            
+            &:after {
+                display:block;
+                position:absolute;
+                content:'';
+                right:0;
+                top:15px;
+                width:8px;
+                height:8px;
+                transform:rotate(-45deg);
+                transform-origin:50% 50%;
+                border-color:$offwhite;
+                border-style:solid;
+                border-width:0 2px 2px 0;
+            }
+            
+            &:before {
+                transition:.2s ease-out;
+                position:absolute;
+                content:'';
+                width:40px;
+                height:2px;
+                top:18px;
+                right:0;
+                background:$offwhite;
+            }
+            
+            &:hover {
+                
+                &:before {
+                    width:30px;
+                    max-width:100%;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}

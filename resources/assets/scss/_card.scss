@@ -1,0 +1,120 @@
+.card {
+    
+    border-radius:0;
+    border:none;
+    transition:.2s ease-out;
+    margin:0 2px 2px 0;
+    position:relative;
+    bottom:0;
+    
+    &:hover {
+        box-shadow:0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+        z-index:999;
+    }
+    
+    &.card-link {
+        
+        transition:.2s ease-out;
+        
+        .card-title {
+            opacity:.8;
+        }
+        
+        &.active {
+            
+            .card-title {
+                opacity:1;
+            }
+            
+        }
+        
+        &:hover {
+            transform:translateY(-2px);
+            box-shadow:0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+            z-index:999;
+            text-decoration:none;
+            border:none;
+            outline:0;
+            background:$card-hover;
+            cursor:pointer;
+            
+            .card-title,
+            .card-text {
+                color:$primary;
+            }
+            
+        }
+        
+    }
+    
+    .card-block {
+        
+        transition:.2s ease-out;
+        padding:4rem 2rem;
+        
+        .card-title {
+            color:$font-dark;
+        }
+
+        .card-text {
+            color:$font-dark;
+        }
+        
+        a {
+            position:relative;
+            transition:.2s ease-out;
+            color:$primary-hover;
+            font-size:16px;
+            text-decoration:none;
+            font-weight:500;
+
+            &:after {
+                transition:.2s ease-out;
+                position:absolute;
+                content:'';
+                bottom:-3px;
+                right:0;
+                width:0;
+                height:2px;
+                background:$primary-hover;
+            }
+            
+            &:hover {
+
+                &:after {
+                    transition:.2s ease-out;
+                    position:absolute;
+                    content:'';
+                    bottom:-3px;
+                    left:0;
+                    width:100%;
+                    height:2px;
+                    background:$primary-hover;
+                }
+
+            }
+            
+        }
+        
+    }
+    
+}
+
+section#section-funktioner-content {
+    
+    .card {
+        
+        .card-block {
+            height:128px;
+            padding:2.05rem;
+            
+            .card-title {
+                margin:0 auto;
+                text-align:center;
+            }
+            
+        }
+        
+    }
+    
+}

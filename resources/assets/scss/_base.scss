@@ -1,0 +1,156 @@
+html,
+body {
+    height:100%;
+}
+
+body {
+    background:$white;
+    font-family:'Roboto', sans-serif;
+    font-size:12pt;
+    color:$font-color;
+}
+
+main {
+    background:$main-bg;
+    padding:3rem 0;
+}
+
+p {
+    color:$font-p;
+}
+
+header h1,
+header h2 {
+    color:$offwhite;
+}
+
+h1, .h1,
+h2, .h2 {
+    font-size:2rem;
+    color:$heading-color;
+}
+
+a.inline-link {
+    position:relative;
+    transition:.2s ease-out;
+    color:$primary-hover;
+    font-size:16px;
+    text-decoration:none;
+    font-weight:500;
+
+    &:after {
+        transition:.2s ease-out;
+        position:absolute;
+        content:'';
+        bottom:-3px;
+        right:0;
+        width:0;
+        height:2px;
+        background:$primary-hover;
+    }
+
+    &:hover {
+
+        &:after {
+            transition:.2s ease-out;
+            position:absolute;
+            content:'';
+            bottom:-3px;
+            left:0;
+            width:100%;
+            height:2px;
+            background:$primary-hover;
+        }
+
+    }
+
+}
+
+.font-light {
+    font-weight:300;
+}
+
+.white-bg {
+    background:$offwhite;
+}
+
+.border-bottom-mini {
+    position:relative;
+    padding:3px 2px 2px 2px;
+    
+    &:after {
+        position:absolute;
+        content:'';
+        display:block;
+        right:0;
+        bottom:-1px;
+        height:2px;
+        width:100%;
+        background:$font-color;
+        z-index:-1;
+    }
+    
+}
+
+.border-bottom {
+    
+    position:relative;
+    padding-bottom:2rem;
+    
+    &:after {
+        position:absolute;
+        content:'';
+        width:150px;
+        max-width:80%;
+        height:4px;
+        bottom:0;
+        margin:0 auto;
+        left:0;
+        right:0;
+        background:$font-color;
+    }
+    
+}
+
+.material-icons {
+    font-family:'Material Icons';
+    font-weight:normal;
+    font-style:normal;
+    font-size:24px;
+    display:inline-block;
+    line-height:1;
+    text-transform:none;
+    letter-spacing:normal;
+    word-wrap:normal;
+    white-space:nowrap;
+    direction:ltr;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    -moz-osx-font-smoothing:grayscale;
+    font-feature-settings:'liga';
+    vertical-align:middle;
+    padding-bottom:3px;
+}
+
+.fadeInLoad {
+    transition:opacity 1.2s ease-in;
+    opacity:0;
+}
+
+div#map {
+    height:400px;
+}
+
+h1 span {
+    font-weight:100;
+    font-size:1.75rem;
+}
+
+h2 {
+    font-weight:100;
+    font-size:1.75rem;
+}
+
+.mb-5rem {
+    margin-bottom:5rem;
+}

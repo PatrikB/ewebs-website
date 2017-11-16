@@ -1,0 +1,30 @@
+extends layouts/main
+
+block header
+    section(id='section-' + id + '-header', class='container')
+        div(class='text-center fadeInLoad')
+            h1 Kontakta oss
+                span(class='d-block') Har du problem eller frågor rörande våra tjänster är du välkommen att kontakta oss
+
+block content
+    section(id='section-' + id + '-content', class='container')
+        div(class='row card-row')
+            div(class='col-md-6')
+                div(class='card')
+                    div(class='card-block')
+                        h3(class='card-title pl-0') Support #[a(class='h6 mt-3 ml-5-md-up d-block d-inline-md-up', href='mailto:support@ewebs.se') support@ewebs.se] #[span(class='h6 ml-5-md-up d-block d-inline-md-up') 0470 &mdash; 12 34 56]
+                        h5(class='card-text mt-4') Ibland är det inte helt enkelt!
+                        p(class='card-text') Då hjälper vi gärna till, kontakta vår support så återkommer vi så snart vi kan.
+
+            div(class='col-md-6')
+                div(class='card')
+                    div(class='card-block')
+                        h3(class='card-title pl-0') Information #[a(class='h6 mt-3 ml-5-md-up d-block d-inline-md-up', href='mailto:info@ewebs.se') info@ewebs.se] #[span(class='h6 ml-5-md-up d-block d-inline-md-up') 0470 &mdash; 12 34 56]
+                        h5(class='card-text mt-4') Har ni några funderingar över hur det fungerar?
+                        p(class='card-text') Vill ni ha mer information tveka inte att kontakta oss.
+            
+            div(class='col-md-12 px-0-md-up')
+                div(class='card')
+                    div(id='map')
+                    div(class='card-block py-3')
+                        h6(class='card-text text-center') Industrigatan 7, 352 36 VÄXJÖ

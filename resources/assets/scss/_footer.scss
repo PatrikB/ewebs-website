@@ -1,0 +1,40 @@
+footer {
+    
+    background:$white;
+    padding:3rem 0 2rem 0;
+    position:relative;
+    box-shadow:0 -25px 35px -5px rgba(0,0,0,.05);
+    
+    .col-sm-4 {
+        margin-bottom:1rem;
+    }
+            
+    a {
+        display:inline-block;
+        padding:0;
+        margin-bottom:.5em;
+        color:$primary;
+        font-size:.9rem;
+        font-weight:500;
+        transition:.2s ease-out;
+        opacity:.8;
+
+        &:hover {
+            opacity:1;
+            color:$primary-hover;
+            text-decoration:none;
+        }
+
+    }
+    
+    li.active {
+        
+        a {
+            opacity:1;
+            color:$primary-hover;
+            text-decoration:none;
+        }
+        
+    }
+    
+}
