@@ -8493,6 +8493,10 @@ header section {
   padding: 4rem 0;
 }
 
+body.body-page-funktioner header {
+  background-image: url("../images/bg5.jpg");
+}
+
 nav.navbar {
   padding: 1.5rem 0;
 }
@@ -8758,6 +8762,10 @@ footer li.active a {
   opacity: 1;
   color: #1f242c;
   text-decoration: none;
+}
+
+main.page-index .card:hover {
+  box-shadow: none;
 }
 
 .card {
