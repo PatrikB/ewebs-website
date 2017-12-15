@@ -13,6 +13,7 @@
     "express": "^4.16.2",
     "express-force-https": "^1.0.0",
     "express-force-ssl": "^0.3.2",
+    "express-https-redirect": "^1.0.0",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
