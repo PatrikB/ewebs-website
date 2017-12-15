@@ -1,10 +1,8 @@
 const express   = require('express'),
       path      = require('path'),
-      secure    = require('express-force-https'),
       app       = express();
 
 app.use(express.static('public'));
-app.use(secure);
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'resources/views'));
 
