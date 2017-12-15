@@ -1,6 +1,6 @@
 const express   = require('express'),
       path      = require('path'),
-      secure    = require('express-force-https');
+      secure    = require('express-force-https'),
       app       = express();
 
 app.use(express.static('public'));
