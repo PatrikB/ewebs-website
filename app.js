@@ -1,10 +1,9 @@
 const express       = require('express'),
       path          = require('path'),
-      httpsRedirect = require('express-https-redirect'),
       app           = express();
 
+app.use(requireHTTPS);
 app.use(express.static('public'));
-app.use('/', httpsRedirect());
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'resources/views'));
 
@@ -55,3 +54,11 @@ app.get('*', (req, res) => {
 });
 
 app.listen(3000);
+
+function requireHTTPS(req, res, next) {
+  // The 'x-forwarded-proto' check is for Heroku
+  if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
+    return res.redirect('https://' + req.get('host') + req.url);
+  }
+  next();
+}
