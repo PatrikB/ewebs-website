@@ -3,8 +3,8 @@ const express       = require('express'),
       httpsRedirect = require('express-https-redirect'),
       app           = express();
 
-app.use('/', httpsRedirect());
 app.use(express.static('public'));
+app.use('/', httpsRedirect());
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'resources/views'));
 
