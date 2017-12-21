@@ -9,7 +9,8 @@ html(lang='en')
         link(rel='shortcut icon', href='favicon.ico', type='image/x-icon')
         link(rel='stylesheet', href='/assets/css/styles.css', type='text/css')
         script(async src='https://www.googletagmanager.com/gtag/js?id=UA-111416455-1')
-        - window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-111416455-1');
+        script.
+            window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-111416455-1');
 
     body(class='body-page-' + id)
         header
