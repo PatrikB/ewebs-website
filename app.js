@@ -10,6 +10,8 @@ let sslOptions = {
     cert: fs.readFileSync('wildcard.ewebs.se.crt')
 };
 
+app.all('*', secure);
+
 app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'resources/views'));
@@ -62,3 +64,12 @@ app.get('*', (req, res) => {
 
 http.createServer(app).listen(3000);
 https.createServer(sslOptions, app).listen(3443);
+
+function secure (req, res, next) {
+    
+    if(req.secure)
+        return next();
+    
+    res.redirect('https://' + req.hostname + req.url);
+    
+}
