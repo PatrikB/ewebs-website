@@ -1,8 +1,15 @@
 const express       = require('express'),
+      http          = require('http'),
+      https         = require('https'),
+      fs            = require('fs'),
       path          = require('path'),
       app           = express();
 
-app.use(requireHTTPS);
+let sslOptions = {  
+    key: fs.readFileSync('wildcard.ewebs.se.key'),
+    cert: fs.readFileSync('wildcard.ewebs.se.crt')
+};
+
 app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'resources/views'));
@@ -53,12 +60,5 @@ app.get('*', (req, res) => {
     
 });
 
-app.listen(3000);
-
-function requireHTTPS(req, res, next) {
-  // The 'x-forwarded-proto' check is for Heroku
-  if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_ENV !== "development") {
-    return res.redirect('https://' + req.get('host') + req.url);
-  }
-  next();
-}
+http.createServer(app).listen(3000);
+https.createServer(sslOptions, app).listen(3443);
